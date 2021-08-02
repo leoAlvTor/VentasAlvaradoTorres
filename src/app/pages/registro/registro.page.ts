@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Persona} from "../../model/persona";
+import {FirebaseService} from "../../firebase.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registro',
@@ -7,13 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroPage implements OnInit {
 
-  constructor() { }
+  persona: Persona;
+
+  constructor(private firebase: FirebaseService, private route: Router) {
+    this.persona = new Persona();
+  }
 
   ngOnInit() {
   }
 
-  registro(){
+  async crearUsuario(){
+    await this.firebase.addDocument('cliente', JSON.parse(JSON.stringify(this.persona)));
+    await this.regresarLogin();
+  }
 
+  async regresarLogin(){
+    await this.route.navigate(['login'])
   }
 
 

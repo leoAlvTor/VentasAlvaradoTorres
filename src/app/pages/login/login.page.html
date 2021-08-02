@@ -5,5 +5,26 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-input [(ngModel)]="persona.correo">Correo:</ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input [(ngModel)]="persona.password">Password:</ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="verificarCredenciales()">Iniciar Sesion</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="registrarte()">Registrate</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

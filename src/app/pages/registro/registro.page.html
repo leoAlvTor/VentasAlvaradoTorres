@@ -8,21 +8,25 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-input>Nombre:</ion-input>
+        <ion-input [(ngModel)]="persona.nombre">Nombre:</ion-input>
       </ion-col>
 
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-input>Correo:</ion-input>
+        <ion-input [(ngModel)]="persona.correo">Correo:</ion-input>
       </ion-col>
 
     </ion-row>
     <ion-row>
       <ion-col>
-        <ion-input type="password">Password:</ion-input>
+        <ion-input type="password" [(ngModel)]="persona.password">Password:</ion-input>
       </ion-col>
 
+    </ion-row>
+
+    <ion-row>
+      <ion-col><ion-button expand="block" color="danger" (click)="crearUsuario()">Crear Cuenta</ion-button> </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

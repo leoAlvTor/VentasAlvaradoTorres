@@ -10,8 +10,8 @@ export const environment = {
     projectId: "ventasalvaradotorres",
     storageBucket: "ventasalvaradotorres.appspot.com",
     messagingSenderId: "972677285446",
-    appId: "1:972677285446:web:b391d9afa17e545aa82c47",
-    measurementId: "G-NM13813HGS"
+    appId: "1:972677285446:web:e3e3b717b428fdcaa82c47",
+    measurementId: "G-YGEEXF1W0Q"
   }
 };
 
